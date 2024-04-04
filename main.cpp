@@ -2,6 +2,8 @@
 
 int main() {
     int option;
+
+do{
     printf("Simple calculator\n\n");
     printf("Pick an option: \n");
     printf("1.Sum\n");
@@ -10,20 +12,19 @@ int main() {
     printf("4.Division\n");
     printf("0. EXIT\n");
     scanf("%d", &option);
-do{
     switch(option){
         case 1:
-            printf("###Sum###");
+            printf("###Sum###\n\n");
             break;
 
         case 2:
-            printf("###Subtraction###");
+            printf("###Subtraction###\n\n");
             break;
         case 3:
-            printf("###Multiplication###");
+            printf("###Multiplication###\n\n");
             break;
         case 4:
-            printf("###Division###");
+            printf("###Division###\n\n");
             break;
         default:
             printf("Pick a right option !!!\n\n");
