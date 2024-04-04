@@ -1,9 +1,10 @@
 #include <iostream>
 
-int main() {
-    int option;
+float first_number, second_number;
+int option;
 
-do{
+void menu(){
+
     printf("Simple calculator\n\n");
     printf("Pick an option: \n");
     printf("1.Sum\n");
@@ -12,19 +13,45 @@ do{
     printf("4.Division\n");
     printf("0. EXIT\n");
     scanf("%d", &option);
+}
+
+void insertingNumbers(){
+    printf("Insert first number\n");
+    scanf("%f", &first_number);
+    printf("Insert second number\n");
+    scanf("%f", &second_number);
+}
+int main() {
+    do{
+        float result;
+        menu();
     switch(option){
         case 1:
             printf("###Sum###\n\n");
+            insertingNumbers();
+            result = first_number + second_number;
+            printf("%f\n\n", result);
             break;
 
         case 2:
             printf("###Subtraction###\n\n");
+            insertingNumbers();
+            result = first_number - second_number;
+            printf("%f\n\n", result);
             break;
         case 3:
             printf("###Multiplication###\n\n");
+            insertingNumbers();
+            result = first_number * second_number;
+            printf("%f\n\n", result);
             break;
         case 4:
             printf("###Division###\n\n");
+            insertingNumbers();
+            result = first_number / second_number;
+            printf("%f\n\n", result);
+            break;
+        case 0:
             break;
         default:
             printf("Pick a right option !!!\n\n");
