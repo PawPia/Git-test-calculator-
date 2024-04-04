@@ -2,6 +2,7 @@
 
 float first_number, second_number;
 int option;
+float result;
 
 void menu(){
 
@@ -21,35 +22,48 @@ void insertingNumbers(){
     printf("Insert second number\n");
     scanf("%f", &second_number);
 }
+
+void sum(){
+    printf("###Sum###\n\n");
+    insertingNumbers();
+    result = first_number + second_number;
+}
+
+void subtraction(){
+    printf("###Subtraction###\n\n");
+    insertingNumbers();
+    result = first_number - second_number;
+}
+void multiplication(){
+    printf("###Multiplication###\n\n");
+    insertingNumbers();
+    result = first_number * second_number;
+}
+void division(){
+    printf("###Division###\n\n");
+    insertingNumbers();
+    result = first_number / second_number;
+}
+
 int main() {
     do{
-        float result;
         menu();
     switch(option){
         case 1:
-            printf("###Sum###\n\n");
-            insertingNumbers();
-            result = first_number + second_number;
-            printf("%f\n\n", result);
+            sum();
+            printf("Your result is :\n%f\n\n", result);
             break;
-
         case 2:
-            printf("###Subtraction###\n\n");
-            insertingNumbers();
-            result = first_number - second_number;
-            printf("%f\n\n", result);
+            subtraction();
+            printf("Your result is :\n%f\n\n", result);
             break;
         case 3:
-            printf("###Multiplication###\n\n");
-            insertingNumbers();
-            result = first_number * second_number;
-            printf("%f\n\n", result);
+            multiplication();
+            printf("Your result is :\n%f\n\n", result);
             break;
         case 4:
-            printf("###Division###\n\n");
-            insertingNumbers();
-            result = first_number / second_number;
-            printf("%f\n\n", result);
+            division();
+            printf("Your result is :\n%f\n\n", result);
             break;
         case 0:
             break;
